@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+X-Nemo-Application-Type=silica-qt5
+Name=CarBudget
+Icon=org.condo4.harbour.carbudget
+Exec=org.condo4.harbour.carbudget
+
+[X-Application]
+Permissions=
+OrganizationName=org.condo4
+ApplicationName=harbour.carbudget

@@ -6,9 +6,9 @@
 #         - desktop icon filename must be changed
 #         - desktop filename must be changed
 #         - icon definition filename in desktop file must be changed
-TARGET = harbour-carbudget
+TARGET = org.condo4.harbour.carbudget
 
-CONFIG += sailfishapp
+CONFIG += auroraapp
 
 QT += sql xml
 
@@ -91,12 +91,12 @@ DISTFILES += \
     qmlModules/jbQuick/Charts/*.js \
     qmlModules/jbQuick/Charts/*.md \
     rpm/CarBudget.spec \
-    harbour-carbudget.desktop \
+    org.condo4.harbour.carbudget.desktop \
     rpm/harbour-carbudget.yaml \
     rpm/harbour-carbudget.spec \
     translations/*.ts
 
-SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
+AURORAAPP_ICONS = 86x86 108x108 128x128 172x172
 
 # to disable building translations every time, comment out the
 # following CONFIG line

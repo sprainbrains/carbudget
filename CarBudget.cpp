@@ -23,7 +23,7 @@
 #include <QtQuick>
 #endif
 
-#include <sailfishapp.h>
+#include <auroraapp.h>
 #include <QSettings>
 #include <QLocale>
 #include "src/tank.h"
@@ -53,15 +53,15 @@ int main(int argc, char *argv[])
 
     qDebug() << "Starting CarBudget" << APP_VERSION;
 
-    QGuiApplication *app = SailfishApp::application(argc, argv);
-    app->setOrganizationName("harbour-carbudget");
-    app->setApplicationName("harbour-carbudget");
-    QQuickView *view = SailfishApp::createView();
+    QGuiApplication *app = Aurora::Application::application(argc, argv);
+    app->setOrganizationName("org.condo4");
+    app->setApplicationName("harbour.carbudget");
+    QQuickView *view = Aurora::Application::createView();
 
     QLocale systemLocale;
 
     QTranslator translator;
-    if(translator.load((systemLocale.name() != "C")?(systemLocale.name()):("en_GB"), "/usr/share/harbour-carbudget/translations/"))
+    if(translator.load((systemLocale.name() != "C")?(systemLocale.name()):("en_GB"), "/usr/share/org.condo4.harbour.carbudget/translations/"))
     {
         QGuiApplication::installTranslator(&translator);
     }
@@ -83,12 +83,12 @@ int main(int argc, char *argv[])
 
     CarManager manager;
 
-    view->engine()->addImportPath("/usr/share/harbour-carbudget/qmlModules");
+    view->engine()->addImportPath("/usr/share/org.condo4.harbour.carbudget/qmlModules");
     view->rootContext()->setContextProperty("manager", &manager);
     view->rootContext()->setContextProperty("downloadPath", QStandardPaths::writableLocation(QStandardPaths::DownloadLocation));
     view->rootContext()->setContextProperty("systemCurrencySymbol", systemLocale.currencySymbol());
     view->rootContext()->setContextProperty("systemDistanceUnit", QString(systemLocale.measurementSystem() == 0 ? "km" : "mi"));
-    view->setSource(SailfishApp::pathTo("qml/Application.qml"));
+    view->setSource(Aurora::Application::pathTo("qml/Application.qml"));
     view->showFullScreen();
 
     int errorlevel = app->exec();
