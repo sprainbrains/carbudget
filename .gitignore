@@ -6,3 +6,10 @@
 *.pro.user.*
 *.qm
 *.spec.*
+*.o
+moc*.cpp
+Makefile
+RPMS
+qrc*.cpp
+*.list
+org.condo4.harbour.carbudget
