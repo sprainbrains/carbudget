@@ -43,8 +43,8 @@
     </message>
     <message>
         <location filename="../qml/pages/BackupNotification.qml" line="46"/>
-        <source>Во время операции резервного копирования произошла ошибка.</source>
-        <translation></translation>
+        <source>There was an error during the backup operation.</source>
+        <translation>Произошла ошибка в процессе создания резервной копии.</translation>
     </message>
 </context>
 <context>
@@ -64,6 +64,13 @@
         <location filename="../qml/pages/BudgetView.qml" line="87"/>
         <source>Statistics</source>
         <translation>Статистика</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/BudgetView.qml" line="391"/>
+        <location filename="../qml/pages/BudgetView.qml" line="417"/>
+        <location filename="../qml/pages/BudgetView.qml" line="443"/>
+        <source>%L1 mpg</source>
+        <translation type="unfinished">%L1 миль/г</translation>
     </message>
     <message>
         <location filename="../qml/pages/BudgetView.qml" line="520"/>
@@ -144,13 +151,6 @@
         <location filename="../qml/pages/BudgetView.qml" line="345"/>
         <source>Fuel</source>
         <translation>Топливо</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/BudgetView.qml" line="391"/>
-        <location filename="../qml/pages/BudgetView.qml" line="417"/>
-        <location filename="../qml/pages/BudgetView.qml" line="443"/>
-        <source>%L1 миль/г</source>
-        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../qml/pages/BudgetView.qml" line="404"/>
@@ -236,7 +236,7 @@
     <message>
         <location filename="../qml/pages/CarEntry.qml" line="98"/>
         <source>Consumption: %L1 mpg</source>
-        <translation>Расход: %L1 миль/г<</translation>
+        <translation>Расход: %L1 миль/г</translation>
     </message>
     <message>
         <location filename="../qml/pages/CarEntry.qml" line="105"/>
