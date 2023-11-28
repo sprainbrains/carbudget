@@ -99,15 +99,9 @@ AURORAAPP_ICONS = 86x86 108x108 128x128 172x172
 
 # to disable building translations every time, comment out the
 # following CONFIG line
-CONFIG += sailfishapp_i18n
+CONFIG += auroraapp_i18n
 
-TRANSLATIONS = translations/de_DE.ts \
-               translations/fi_FI.ts \
-               translations/fr_FR.ts \
-               translations/it_IT.ts \
-               translations/ru_RU.ts \
-               translations/sv_SE.ts
-
+TRANSLATIONS = translations/*.ts 
 QML_IMPORT_PATH += ./qmlModules
 
 

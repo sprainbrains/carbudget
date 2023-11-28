@@ -59,12 +59,20 @@ int main(int argc, char *argv[])
     QQuickView *view = Aurora::Application::createView();
 
     QLocale systemLocale;
-
-    QTranslator translator;
-    if(translator.load((systemLocale.name() != "C")?(systemLocale.name()):("en_GB"), "/usr/share/org.condo4.harbour.carbudget/translations/"))
-    {
-        QGuiApplication::installTranslator(&translator);
+    QTranslator* translator = new QTranslator(app);
+    QString transDir = Aurora::Application::pathTo("translations").toLocalFile();
+    QString transFile("org.condo4.harbour.carbudget");
+    
+    if (translator->load(systemLocale, transFile, "-", transDir) ||
+        translator->load(transFile, transDir)) {
+        app->installTranslator(translator);
+    } else {
+        qDebug() << "Failed to load translator for" << systemLocale.name();
+        delete translator;
     }
+
+
+
 
     app->setApplicationVersion(QString(APP_VERSION));
 
